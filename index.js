@@ -24,8 +24,9 @@ $(document).ready(function () {
             `https://rightavenues-free-noise-report.s3.amazonaws.com/zipcode-noise-stats-v2/${zipcode.value}.json`
           );
           const json = await response.json();
-          const percentile = json[`stats.${type}_v1_category`];
+
           TYPES.map((type) => {
+            const percentile = json[`stats.${type}_v1_category`];
             document.getElementById(
               `noisereport_${type}_complaints`
             ).innerText = json[`stats.${type}`] + " noise complaints";
