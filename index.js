@@ -1,4 +1,5 @@
 const noisereport = document.getElementById("noisereport");
+
 $(document).ready(function () {
   console.log("VSCNEW");
   const MUSICPARTY = "music_party";
@@ -71,6 +72,7 @@ $(document).ready(function () {
             }
           });
           noisereport.style.visibility = "visible";
+          noisereport.style.display = "block";
         } catch (error) {
           console.log(error);
         }
