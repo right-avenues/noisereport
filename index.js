@@ -6,7 +6,7 @@ $(document).ready(function () {
   const CONSTRUCTION = "construction";
   const VEHICLE = "vehicle";
   const HELICOPTER = "helicopter";
-  const STREET = "street_noise";
+  const STREET = "other_street_noise";
   const TYPES = [MUSICPARTY, CONSTRUCTION, VEHICLE, HELICOPTER, STREET];
 
   noisereport.style.visibility = "hidden";
