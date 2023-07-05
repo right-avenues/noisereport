@@ -22,7 +22,12 @@ $(document).ready(function () {
         "noisereport_zipcode"
       );
 
-      if (zipcode.value && email.value && name.value) {
+      if (
+        zipcode.value &&
+        email.value &&
+        name.value &&
+        validateEmail(email.value)
+      ) {
         noisereport_zipcode.innerText = zipcode.value;
         try {
           const response = await fetch(
@@ -86,6 +91,13 @@ $(document).ready(function () {
 // https://cdn.jsdelivr.net/gh/right-avenues/noisereport@a69c895/index.js
 // https://cdn.jsdelivr.net/gh/right-avenues/noisereport@a69c895/index.js
 // https://raw.githubusercontent.com/right-avenues/noisereport/main/index.js
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
 const sample = {
   zip_code: "10020",
