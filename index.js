@@ -1,3 +1,4 @@
+const noisereport = document.getElementById("noisereport");
 $(document).ready(function () {
   console.log("VSCNEW");
   const MUSICPARTY = "music_party";
@@ -6,7 +7,7 @@ $(document).ready(function () {
   const HELICOPTER = "helicopter";
   const STREET = "street_noise";
   const TYPES = [MUSICPARTY, CONSTRUCTION, VEHICLE, HELICOPTER, STREET];
-  const noisereport = document.getElementById("noisereport");
+
   noisereport.style.visibility = "hidden";
 
   (function clickMe() {
