@@ -35,7 +35,7 @@ $(document).ready(function () {
             document.getElementById(
               `noisereport_${type}_complaints`
             ).innerText = json[`stats.${type}`] + " noise complaints";
-
+            console.log(type);
             switch (percentile) {
               case "other":
                 document.getElementById(
