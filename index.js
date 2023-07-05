@@ -5,6 +5,8 @@ $(document).ready(function () {
   const VEHICLE = "vehicle";
   const HELICOPTER = "helicopter";
   const TYPES = [MUSICPARTY, CONSTRUCTION, VEHICLE, HELICOPTER];
+  const noisereport = document.getElementById("noisereport");
+  noisereport.style.visibility = "hidden";
 
   (function clickMe() {
     const button = document.getElementById("submit-button");
@@ -66,7 +68,7 @@ $(document).ready(function () {
                 break;
             }
           });
-          console.log(json);
+          noisereport.style.visibility = "visible";
         } catch (error) {
           console.log(error);
         }
