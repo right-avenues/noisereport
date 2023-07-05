@@ -4,7 +4,8 @@ $(document).ready(function () {
   const CONSTRUCTION = "construction";
   const VEHICLE = "vehicle";
   const HELICOPTER = "helicopter";
-  const TYPES = [MUSICPARTY, CONSTRUCTION, VEHICLE, HELICOPTER];
+  const STREET = "street_noise";
+  const TYPES = [MUSICPARTY, CONSTRUCTION, VEHICLE, HELICOPTER, STREET];
   const noisereport = document.getElementById("noisereport");
   noisereport.style.visibility = "hidden";
 
